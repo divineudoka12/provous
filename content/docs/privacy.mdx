@@ -1,0 +1,32 @@
+---
+title: What Provous hides and doesn't
+description: The intended privacy properties, stated carefully while implementation details are being verified.
+---
+
+## The intended outcome
+
+Provous is intended to let an AI agent pay without putting the payer, recipient, amount, or reason on public display. The project is built around Zcash shielded technology.
+
+That is a design goal, not a completed privacy analysis of the Provous implementation. The exact transaction path and guarantees must be confirmed against the working tool and its threat model.
+
+## What this page can say today
+
+| Question | Current answer |
+| --- | --- |
+| What is Provous trying to protect? | The payment relationship and its details: who paid, who was paid, how much, and why. |
+| What technology is it built around? | Zcash shielded technology. |
+| Has the complete Provous flow been independently verified here? | No. This frontend has not received an implementation contract or audit results. |
+| Are network, timing, or endpoint metadata hidden? | Not established. Do not assume they are protected by the payment flow. |
+
+## What still needs to be documented
+
+- Which transaction details are shielded, and under what conditions.
+- What information a recipient, network observer, RPC provider, or operator can see.
+- How wallet keys are stored, used, backed up, and recovered.
+- What happens when funds move between transparent and shielded pools.
+- The effects of timing, network metadata, and application logs.
+- Whether spending policies are enforced in a way the agent cannot bypass.
+
+## A practical rule
+
+Do not use real funds or rely on a privacy guarantee based only on this page. Wait for the tool-specific threat model and test the exact release you plan to use.

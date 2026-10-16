@@ -1,0 +1,26 @@
+---
+title: Concepts
+description: The ideas behind private payments for autonomous agents.
+---
+
+## Private payments
+
+Provous is being built around Zcash shielded technology. Its goal is to let an agent make a payment without publishing the payer, recipient, amount, or reason in the way a transparent payment trail can.
+
+The exact guarantees depend on the tool's implementation and the transaction path. Read [What Provous hides and doesn't](/docs/privacy) for the current scope and open questions.
+
+## Agent wallet
+
+An agent needs a way to request and authorize payments while software is running. Provous is intended to provide that wallet and command-line interface. Key handling, recovery, permissions, and supported signing flows need confirmation from the implementation before this page can give operational guidance.
+
+## Spending limits
+
+Spending boundaries are part of the project direction: an agent should have constraints on what it can spend. Which limits exist, where they are enforced, and whether they are enforced by the tool or by an external policy are not yet confirmed here.
+
+## Owner visibility
+
+An operator may need to inspect or manage an agent's activity. Whether Provous supports a separate owner view, and what that view reveals, remains to be documented from the working tool.
+
+## Zcash and shielded transactions
+
+Zcash supports shielded transactions. Provous aims to make that capability usable by autonomous software through a developer-oriented interface. This description is not an audit or an independent verification of Provous itself.
